@@ -1,25 +1,25 @@
-function adicionar(numero1, numero2) {
-    return numero1 + numero2;
+function adicionar(valor1, valor2) {
+    return valor1 + valor2;
 };
 
-function subtracao(numero1, numero2) {
-    return numero1 - numero2;
+function subtracao(valor1, valor2) {
+    return valor1 - valor2;
 };
 
-function multiplicacao(numero1, numero2) {
-    return numero1 * numero2;
+function multiplicacao(valor1, valor2) {
+    return valor1 * valor2;
 };
 
-function divisao(numero1, numero2) {
-    return numero1/numero2;
+function divisao(valor1, valor2) {
+    return valor1/valor2;
 };
 
-function quadradoDoNumero(numero1) {
-    return multiplicacao(numero1, numero1);
+function quadradoDoNumero(valor1) {
+    return multiplicacao(valor1, valor1);
 };
 
-function mediaDeTresNumeros(numero1, numero2, numero3) {
-    const resultadoDaSoma = numero1 + numero2 + numero3;
+function mediaDeTresNumeros(valor1, valor2, valor3) {
+    const resultadoDaSoma = valor1 + valor2 + valor3;
     return divisao(resultadoDaSoma, 3);
 };
 
@@ -27,8 +27,8 @@ function calculaPorcentagem(numero, porcentagem) {
     return `${divisao(multiplicacao(numero, porcentagem),100)}%`
 }
 
-function geradorDePorcentagem(numero1, numero2) {
-    return `${divisao(multiplicacao(numero1, 100),numero2)}%`
+function geradorDePorcentagem(valor1, valor2) {
+    return `${divisao(multiplicacao(valor1, 100),valor2)}%`
 }
 
 console.log("-------------- Teste de Operações / Calculadora --------------");
