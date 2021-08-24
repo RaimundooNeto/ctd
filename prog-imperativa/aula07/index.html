@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+</head>
+<body>
+    <script>
+
+        //IF, ELSe IF, ELSE
+
+        var placarJogador1 = 0;
+        var placarJogador2 = 1;
+
+        var estaVencendo = placarJogador1 > placarJogador2;
+        var estaEmpatado = placarJogador1 == placarJogador2;
+
+        if(estaVencendo) {
+            alert(`Jogador 1 esta vencendo por ${placarJogador1} X ${placarJogador2}`);
+        }
+        else if(estaEmpatado) {
+            alert(`O jogo esta empatado em ${placarJogador1} X ${placarJogador2}`)
+        }
+        else {
+            alert(`Jogador 2 esta vencendo por ${placarJogador2} X ${placarJogador1}`)
+        }
+
+        //SWITCH CASE
+
+        var diaDaSemana = 'sexta'
+
+        switch(diaDaSemana) {
+            case 'domingo':
+                //instrução
+            break;
+            case 'segunda':
+                //instrução
+            break;
+            case 'terça':
+                //instrução
+            break;
+            case 'quarta':
+                //instrução
+            break;
+            case 'quinta':
+                //instrução
+            break;
+            case 'sexta':
+                //instrução
+            break;
+            case 'sabado':
+                //instrução
+            break;
+            default:
+                alert(`${diaDaSemana} não é um valor válido`)
+        }
+
+        //TIPO DE VARIÁVEIS Object
+
+        var produto = {
+            nome: 'Gel Antisséptico',
+            marca: 'Asseptgel',
+            preco: 13.9
+        };
+
+        //ACESSAR OBJETO
+        alert(produto.nome);
+        alert(produto.marca);
+        alert(produto.preco);
+
+        //EDITAR OBJETO
+        produto.nome = 'Creme dental';
+
+        //CRIANDO PROPIEDADE
+        produto.categoria = 'Higiene pessoal'
+
+    </script>
+</body>
+</html>
