@@ -53,10 +53,15 @@
                     - Receberá um pedido de agradecimento.
 
         */
+       var nome = '';
        var peso = 0;
        var altura = 0;
        var resultadoImc = 0;
-       var perfilImc = ''
+       var perfilImc = '';
+       var ImcAcimaDoNormal = false;
+       var respostaConsulta = false;
+       var dataConsulta = '';
+       var horaConsulta = '';
        
         function perguntarPeso() {
             peso = prompt('Qual seu peso');
@@ -84,17 +89,54 @@
             }
             else if(sobrepeso) {
                 perfilImc = 'SOBREPESO';
+                ImcAcimaDoNormal = true;
             }
             else if(obesidade) {
                 perfilImc = 'OBESIDADE';
+                ImcAcimaDoNormal = true;
             }
             else {
                 perfilImc = 'OBESIDADE GRAVE';
+                ImcAcimaDoNormal = true;
             }
         }
 
         function mostrarMensagem() {
             alert(`Seu IMC é iqual a: ${resultadoImc.toFixed(2)} e sua seu perfil de IMC é: ${perfilImc}`);
+        }
+
+        function indicarNutricionista() {
+            if(ImcAcimaDoNormal) {
+                respostaConsulta = confirm(`Seu IMC está em um nível acima do normal, gostaria de agendar uma consulta com um de nossos nutricionistas ?`);
+            }
+
+            else {
+                alert('Agradecemos por utilizar nossa calculadora de IMC, nos indique para os amigos e vamos tornar juntos o mundo mais saudável!')
+            }
+        }
+
+        function perguntarNome() {
+            nome = prompt('Qual o seu nome?');
+        }
+
+        function perguntarDataConsulta() {
+            dataConsulta = prompt('Qual a data que você deseja se consultar (informar data no formato "dd/mm/yyy")')
+        }
+
+        function perguntarHoraConsulta() {
+            horaConsulta = prompt('Informe agora a hora que deseja se consultar (informar hora  no formato "hh:mm")')
+        }
+
+        function marcarConsulta() {
+            if(respostaConsulta) {
+                perguntarNome();
+                perguntarDataConsulta();
+                perguntarHoraConsulta();
+                alert(`${nome}, a sua consulta com a Dra. Luana Nagydai foi agendada para o dia ${dataConsulta}, no seguinte horário: ${horaConsulta}, agradecemos a preferência.`)
+            }
+            else {
+                alert(`Tudo bem ${nome}, estaremos disponíveis caso mude de ideia, obrigado por utilizar nossa calculadora de IMC e nos indique para os amigos, vamos juntos tornar o mundo um lugar mais saudável.`)
+            }
         }
 
         function executarSistemaDeImc() {
@@ -103,6 +145,8 @@
             calcularImc();
             definirPerfilImc();
             mostrarMensagem();
+            indicarNutricionista();
+            marcarConsulta();
         }
 
         // function calcularImc() {
