@@ -59,7 +59,7 @@
        var resultadoImc = 0;
        var perfilImc = '';
        var ImcAcimaDoNormal = false;
-       var respostaConsulta = false;
+       var desejaMarcarConsulta = false;
        var dataConsulta = '';
        var horaConsulta = '';
        
@@ -101,13 +101,13 @@
             }
         }
 
-        function mostrarMensagem() {
+        function mostrarResultadoImc() {
             alert(`Seu IMC é iqual a: ${resultadoImc.toFixed(2)} e sua seu perfil de IMC é: ${perfilImc}`);
         }
 
         function indicarNutricionista() {
             if(ImcAcimaDoNormal) {
-                respostaConsulta = confirm(`Seu IMC está em um nível acima do normal, gostaria de agendar uma consulta com um de nossos nutricionistas ?`);
+                desejaMarcarConsulta = confirm(`Seu IMC está em um nível acima do normal, gostaria de agendar uma consulta com um de nossos nutricionistas ?`);
             }
 
             else {
@@ -119,20 +119,21 @@
             nome = prompt('Qual o seu nome?');
         }
 
-        function perguntarDataConsulta() {
-            dataConsulta = prompt('Qual a data que você deseja se consultar (informar data no formato "dd/mm/yyy")')
-        }
-
-        function perguntarHoraConsulta() {
-            horaConsulta = prompt('Informe agora a hora que deseja se consultar (informar hora  no formato "hh:mm")')
+        function perguntarDataEHoraConsulta() {
+            dataConsulta = prompt('Qual a data que você deseja se consultar (informar data no formato "dd/mm/yyy")');
+            horaConsulta = prompt('Informe agora a hora que deseja se consultar (informar hora  no formato "hh:mm")');
         }
 
         function marcarConsulta() {
-            if(respostaConsulta) {
+            let desejaMudarAgendamento = false;
+
+            if(desejaMarcarConsulta) {
                 perguntarNome();
-                perguntarDataConsulta();
-                perguntarHoraConsulta();
-                alert(`${nome}, a sua consulta com a Dra. Luana Nagydai foi agendada para o dia ${dataConsulta}, no seguinte horário: ${horaConsulta}, agradecemos a preferência.`)
+                do {
+                    perguntarDataEHoraConsulta();
+                   desejaMudarAgendamento = confirm(`Você está agendando a consulta para a data ${dataConsulta} às ${horaConsulta}, para confirmar click em "OK" ou para informar uma nova data clique em "cancel".`);
+                } while (!desejaMudarAgendamento);
+                alert(`${nome}, a sua consulta com a Dra. Luana Nagydai foi agendada para o dia ${dataConsulta}, no seguinte horário: ${horaConsulta}, agradecemos a preferência.`);
             }
             else {
                 alert(`Tudo bem ${nome}, estaremos disponíveis caso mude de ideia, obrigado por utilizar nossa calculadora de IMC e nos indique para os amigos, vamos juntos tornar o mundo um lugar mais saudável.`)
@@ -144,7 +145,7 @@
             perguntarAltura();
             calcularImc();
             definirPerfilImc();
-            mostrarMensagem();
+            mostrarResultadoImc();
             indicarNutricionista();
             marcarConsulta();
         }
