@@ -1,0 +1,23 @@
+.box {
+    width: 300px;
+    height: 300px;
+}
+
+.fist-box {
+    background-color: brown;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+
+.second-box {
+    background-color: crimson;
+    position: relative;
+    z-index: 3;
+}
+
+.third-box {
+    background-color: cyan;
+    position: relative;
+}
