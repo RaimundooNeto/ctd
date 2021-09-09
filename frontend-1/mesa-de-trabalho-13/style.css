@@ -40,6 +40,8 @@ img {
 input, textarea, select {
     margin-bottom: 20px;
     width: 100%;
+    max-width: 300px;
+    min-width: 300px;
     height: 35px;
     border-radius: 5px;
     border: 1px solid gray;
