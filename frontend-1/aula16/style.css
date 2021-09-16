@@ -1,0 +1,23 @@
+@keyframes shake {
+    0% {
+        transform: translate(-20px) ;
+    }
+    100% {
+        transform: translate(20px) ;
+    }
+}
+
+button {
+    border: none;
+    padding: 12px 32px;
+    transition: .5s ease-in-out;
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+button:hover {
+    background-color: aqua;
+    transform: scale(1.2);
+}

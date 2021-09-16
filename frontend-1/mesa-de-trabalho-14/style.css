@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 14px 'Roboto';
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    padding: 20px 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #E46E7D;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-produtos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 80px;
+}
+
+.card-produto {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 5px 5px 15px 5px #0000003d;
+    cursor: pointer;
+}
+
+.card-info {
+    padding: 8px;
+    color: #7D4D48;
+}
+
+img {
+    border-radius: 10px 10px 0 0;
+}
+
+footer {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEE;
+}

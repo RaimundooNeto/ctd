@@ -14,28 +14,44 @@
             <img src="./airbnb-logo-4-1.png" alt="logo">
         </span>
 
-        <h1>Cadastro</h1>
-
         <form>
 
-            <label for="nome">Nome</label>
-            <input type="nome" id="nome" name="nome" maxlength="5">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
 
-            <label for="">Senha</label>
-            <input type="password" id="password" name="password">
+                <label for="nome">Nome</label>
+                <input type="nome" id="nome" name="nome" maxlength="5">
 
-            <label for="">Data de nascimento</label>
-            <input type="date" id="date" name="date">
+                <label for="">Email</label>
+                <input type="email" id="email" name="email">
 
-            <label for="">Cidade</label>
-            <select name="city" id="city">
-                <option value="1">São paulo</option>
-                <option value="2">Rio de janeiro</option>
-                <option value="3">Minas Gerais</option>
-            </select>
+                <label for="">Senha</label>
+                <input type="password" id="password" name="password">
 
-            <label for="">Observações</label>
-            <textarea type="date" id="date" name="date"></textarea>
+                <label for="">Data de nascimento</label>
+                <input type="date" id="date" name="date">
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização</legend>
+
+                <label for="">Cidade</label>
+                <select name="city" id="city">
+                    <optgroup Label="Sul">
+                        <option value="1">São paulo</option>
+                        <option value="2">Rio de janeiro</option>
+                        <option value="3">Minas Gerais</option>
+                    </optgroup>
+                    <optgroup>
+                        <option value="1">São paulo</option>
+                        <option value="2">Rio de janeiro</option>
+                        <option value="3">Minas Gerais</option>
+                    </optgroup>
+                </select>
+
+                <label for="">Observações</label>
+                <textarea type="date" id="date" name="date"></textarea>
+            </fieldset>
 
             <div class="actions-container">
                 <button type="submit">Resetar</button>
