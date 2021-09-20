@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+main section {
+    height: 300px;
+    width: 300px;
+}
+
+main section:nth-child(1) {
+    background-color: violet;
+}
+
+main section:nth-child(2) {
+    background-color: salmon;
+}
+
+main section:nth-child(3) {
+    background-color: lightskyblue;
+}
