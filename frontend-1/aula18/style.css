@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+    'header header'
+    'aside main'
+    'footer footer';
+}
+
+body header {
+    background-color: salmon;
+    grid-area: header;
+}
+
+body aside {
+    background-color: crimson;
+    grid-area: aside;
+}
+
+body main {
+    background-color: lightseagreen;
+    grid-area: main;
+}
+
+body footer {
+    background-color: purple;
+    grid-area: footer;
+}
